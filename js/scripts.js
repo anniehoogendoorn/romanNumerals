@@ -21,24 +21,15 @@
 
     return output;
   };
- //    for (var i=0; i < numbersArray.length; i++ ) {
- //      if (numbersArray[i] === number) {
- //        return romanArray[i];
- //      }
- //        else if(number % numbersArray[i] === 0 ) {
- //          return romanArray[i].repeat(number);
- //
- //      }
- //      else if(number % numbersArray[i] === 1) {
- //          return romanArray[i] + romanArray[6];
- //      }
- //      else if(number % numbersArray[i] === 2) {
- //        return romanArray[i] + romanArray[6].repeat(2);
- //
- //      }
- //      else if(number % numbersArray[i] === 3) {
- //        return romanArray[i] + romanArray[6].repeat(3);
- //      }
- //    }
- //          debugger;
- // };
+
+  $(document).ready(function() {
+    $("form#converter").submit(function(event) {
+      var input = parseInt($("input#input").val());
+      var result = romanNumeral(input);
+
+      $("#result").text(result);
+      $("#results").show();
+      event.preventDefault();
+      debugger;
+    });
+  });
